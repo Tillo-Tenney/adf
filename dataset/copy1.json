@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "day.csv",
 				"fileSystem": "source"
 			},
 			"columnDelimiter": ",",
