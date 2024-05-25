@@ -4,8 +4,8 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://dummyjson.com/RESOURCE",
-			"enableServerCertificateValidation": true,
+			"url": "https://hub.dummyapis.com/employee",
+			"enableServerCertificateValidation": false,
 			"authenticationType": "Anonymous"
 		}
 	}
