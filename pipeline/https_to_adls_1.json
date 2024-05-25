@@ -103,7 +103,8 @@
 									"path": "$['salary']"
 								},
 								"sink": {
-									"name": "salary"
+									"name": "salary_in_INR",
+									"type": "Decimal"
 								}
 							},
 							{
