@@ -8,8 +8,20 @@
 		"ADLS_Source1_accountKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase_password": {
+			"value": ""
+		},
 		"ADLS_Source1_properties_typeProperties_url": {
 			"value": "https://adls3003.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "test25052024.database.windows.net"
+		},
+		"AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "dbtest"
+		},
+		"AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "admin_test"
 		}
 	}
 }
