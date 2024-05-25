@@ -23,6 +23,9 @@
 		"AzureSqlDatabase_properties_typeProperties_userName": {
 			"value": "admin_test"
 		},
+		"HttpServer_properties_typeProperties_url": {
+			"value": "https://dummy.restapiexample.com/api/v1/employees"
+		},
 		"containerUri": {
 			"value": ""
 		},
