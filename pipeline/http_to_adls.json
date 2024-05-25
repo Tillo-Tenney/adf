@@ -42,20 +42,10 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['status']"
-								},
-								"sink": {
-									"name": "status",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"path": "$['data'][0]['id']"
 								},
 								"sink": {
-									"name": "id",
-									"type": "Int32"
+									"name": "id"
 								}
 							},
 							{
@@ -63,8 +53,7 @@
 									"path": "$['data'][0]['employee_name']"
 								},
 								"sink": {
-									"name": "employee_name",
-									"type": "String"
+									"name": "employee_name"
 								}
 							},
 							{
@@ -72,8 +61,7 @@
 									"path": "$['data'][0]['employee_salary']"
 								},
 								"sink": {
-									"name": "employee_salary",
-									"type": "Int64"
+									"name": "employee_salary"
 								}
 							},
 							{
@@ -81,12 +69,35 @@
 									"path": "$['data'][0]['employee_age']"
 								},
 								"sink": {
-									"name": "employee_age",
-									"type": "Int32"
+									"name": "employee_age"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['profile_image']"
+								},
+								"sink": {
+									"name": "profile_image"
+								}
+							},
+							{
+								"source": {
+									"path": "$['status']"
+								},
+								"sink": {
+									"name": "status"
+								}
+							},
+							{
+								"source": {
+									"path": "$['message']"
+								},
+								"sink": {
+									"name": "message"
 								}
 							}
 						],
-						"collectionReference": "$['data']"
+						"collectionReference": ""
 					}
 				},
 				"inputs": [
