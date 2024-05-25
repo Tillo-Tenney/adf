@@ -24,7 +24,7 @@
 			"value": "admin_test"
 		},
 		"HttpServer_properties_typeProperties_url": {
-			"value": "https://dummy.restapiexample.com/api/v1/employees"
+			"value": "https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001"
 		},
 		"containerUri": {
 			"value": ""

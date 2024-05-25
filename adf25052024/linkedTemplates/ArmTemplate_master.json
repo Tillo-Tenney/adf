@@ -33,7 +33,7 @@
 		},
 		"HttpServer_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://dummy.restapiexample.com/api/v1/employees"
+			"defaultValue": "https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001"
 		},
 		"containerUri": {
 			"type": "string",
