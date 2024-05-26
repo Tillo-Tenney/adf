@@ -1,0 +1,33 @@
+{
+	"name": "SourceDataset_afb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "template_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "time.csv",
+				"fileSystem": "source"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "12-Hour",
+				"type": "String"
+			},
+			{
+				"name": "24-Hour",
+				"type": "String"
+			}
+		]
+	}
+}
