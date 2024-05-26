@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "avro_file.csv",
-				"fileSystem": "archive"
+				"fileSystem": "avro-output"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
