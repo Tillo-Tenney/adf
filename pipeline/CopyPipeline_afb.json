@@ -47,8 +47,14 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"validateDataConsistency": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "ADLS_Source1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "avro-output"
+					},
 					"logSettings": {
 						"enableCopyActivityLog": true,
 						"copyActivityLogSettings": {
