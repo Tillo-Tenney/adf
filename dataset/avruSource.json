@@ -1,5 +1,5 @@
 {
-	"name": "Avro",
+	"name": "avruSource",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS_Source1",
