@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "movie_with_year.csv",
 				"fileSystem": "movie-output"
 			},
 			"columnDelimiter": ",",
