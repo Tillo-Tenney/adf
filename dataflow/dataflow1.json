@@ -19,12 +19,22 @@
 						"type": "DatasetReference"
 					},
 					"name": "movieStage1"
+				},
+				{
+					"dataset": {
+						"referenceName": "MovieOut",
+						"type": "DatasetReference"
+					},
+					"name": "movieStage2"
 				}
 			],
 			"transformations": [
 				{
 					"name": "yearExtraction",
 					"description": "Creating the column year"
+				},
+				{
+					"name": "aggregate"
 				}
 			],
 			"scriptLines": [
@@ -38,6 +48,8 @@
 				"     ignoreNoFilesFound: false) ~> movieIn",
 				"movieIn derive(year = toInteger(trim(right(title, 6), '()')),",
 				"          title = toString(left(title, length(title)-6))) ~> yearExtraction",
+				"yearExtraction aggregate(groupBy(year),",
+				"     total_movies = count()) ~> aggregate",
 				"yearExtraction sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     partitionFileNames:['movie_with_year.csv'],",
@@ -46,7 +58,16 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('hash', 1)) ~> movieStage1"
+				"     partitionBy('hash', 1)) ~> movieStage1",
+				"aggregate sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     partitionFileNames:['movie_count_per_year'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> movieStage2"
 			]
 		}
 	}
