@@ -1,0 +1,6 @@
+{
+	"name": "avro_to_sql",
+	"properties": {
+		"annotations": []
+	}
+}
