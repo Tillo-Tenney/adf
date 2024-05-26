@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText",
+	"name": "avroDest",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS_Source1",
