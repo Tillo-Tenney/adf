@@ -1,0 +1,19 @@
+{
+	"name": "Avro",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_Source1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Avro",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "userdata5.avro",
+				"fileSystem": "avro-input"
+			}
+		},
+		"schema": {}
+	}
+}
