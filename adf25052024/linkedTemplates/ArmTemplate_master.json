@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase'"
 		},
+		"template_LS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'template_LS'"
+		},
 		"ADLS_Source1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adls3003.dfs.core.windows.net/"
@@ -34,6 +38,10 @@
 		"HttpServer_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://hub.dummyapis.com/employee?noofRecords=20&idStarts=1001"
+		},
+		"template_LS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adls3003.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -68,6 +76,9 @@
 					"AzureSqlDatabase_password": {
 						"value": "[parameters('AzureSqlDatabase_password')]"
 					},
+					"template_LS_accountKey": {
+						"value": "[parameters('template_LS_accountKey')]"
+					},
 					"ADLS_Source1_properties_typeProperties_url": {
 						"value": "[parameters('ADLS_Source1_properties_typeProperties_url')]"
 					},
@@ -82,10 +93,33 @@
 					},
 					"HttpServer_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer_properties_typeProperties_url')]"
+					},
+					"template_LS_properties_typeProperties_url": {
+						"value": "[parameters('template_LS_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "adf25052024_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf25052024_ArmTemplate_0')]"
+			]
 		}
 	]
 }

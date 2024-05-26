@@ -11,6 +11,9 @@
 		"AzureSqlDatabase_password": {
 			"value": ""
 		},
+		"template_LS_accountKey": {
+			"value": ""
+		},
 		"ADLS_Source1_properties_typeProperties_url": {
 			"value": "https://adls3003.dfs.core.windows.net/"
 		},
@@ -25,6 +28,9 @@
 		},
 		"HttpServer_properties_typeProperties_url": {
 			"value": "https://hub.dummyapis.com/employee?noofRecords=20&idStarts=1001"
+		},
+		"template_LS_properties_typeProperties_url": {
+			"value": "https://adls3003.dfs.core.windows.net/"
 		}
 	}
 }
