@@ -1,0 +1,63 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "ADLS_Source1",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "avroDest",
+						"type": "DatasetReference"
+					},
+					"name": "avroOut"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          registration_dttm as string,",
+				"          id as long,",
+				"          first_name as string,",
+				"          last_name as string,",
+				"          email as string,",
+				"          gender as string,",
+				"          ip_address as string,",
+				"          cc as long,",
+				"          country as string,",
+				"          birthdate as string,",
+				"          salary as double,",
+				"          title as string,",
+				"          comments as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'avro',",
+				"     fileSystem: 'avro-input',",
+				"     fileName: 'userdata5.avro') ~> source",
+				"source sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Numeric as string,",
+				"          {Numeric-2} as string,",
+				"          {Numeric-Suffix} as string",
+				"     ),",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> avroOut"
+			]
+		}
+	}
+}
