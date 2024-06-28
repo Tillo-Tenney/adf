@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "test65496"
+		},
+		"ADLS_Source1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase_password": {
+			"value": ""
+		},
+		"template_LS_accountKey": {
+			"value": ""
+		},
+		"ADLS_Source1_properties_typeProperties_url": {
+			"value": "https://adls3003.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://test6541961.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "test25052024.database.windows.net"
+		},
+		"AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "dbtest"
+		},
+		"AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "admin_test"
+		},
+		"HttpServer_properties_typeProperties_url": {
+			"value": "https://hub.dummyapis.com/employee?noofRecords=20&idStarts=1001"
+		},
+		"template_LS_properties_typeProperties_url": {
+			"value": "https://adls3003.dfs.core.windows.net/"
+		}
+	}
+}
