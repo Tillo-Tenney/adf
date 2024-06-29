@@ -8,6 +8,9 @@
 		"ADLS_Source1_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
 		"AzureDataLakeStorage2_accountKey": {
 			"value": ""
 		},
@@ -19,6 +22,9 @@
 		},
 		"ADLS_Source1_properties_typeProperties_url": {
 			"value": "https://adls3003.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://test29062024.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"value": "https://test6541961.dfs.core.windows.net/"
@@ -34,6 +40,12 @@
 		},
 		"HttpServer_properties_typeProperties_url": {
 			"value": "https://hub.dummyapis.com/employee?noofRecords=20&idStarts=1001"
+		},
+		"HttpServerBrazil_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/Tillo-Tenney/Data-Engineering_29-06-2024/main/BRAZIL.csv"
+		},
+		"HttpServerCanada_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/Tillo-Tenney/Data-Engineering_29-06-2024/main/Canada.csv"
 		},
 		"template_LS_properties_typeProperties_url": {
 			"value": "https://adls3003.dfs.core.windows.net/"

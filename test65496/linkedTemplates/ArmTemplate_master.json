@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ADLS_Source1'"
 		},
+		"AzureDataLakeStorage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage'"
+		},
 		"AzureDataLakeStorage2_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
@@ -26,6 +30,10 @@
 		"ADLS_Source1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adls3003.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://test29062024.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"type": "string",
@@ -46,6 +54,14 @@
 		"HttpServer_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://hub.dummyapis.com/employee?noofRecords=20&idStarts=1001"
+		},
+		"HttpServerBrazil_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/Tillo-Tenney/Data-Engineering_29-06-2024/main/BRAZIL.csv"
+		},
+		"HttpServerCanada_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/Tillo-Tenney/Data-Engineering_29-06-2024/main/Canada.csv"
 		},
 		"template_LS_properties_typeProperties_url": {
 			"type": "string",
@@ -81,6 +97,9 @@
 					"ADLS_Source1_accountKey": {
 						"value": "[parameters('ADLS_Source1_accountKey')]"
 					},
+					"AzureDataLakeStorage_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage_accountKey')]"
+					},
 					"AzureDataLakeStorage2_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
 					},
@@ -92,6 +111,9 @@
 					},
 					"ADLS_Source1_properties_typeProperties_url": {
 						"value": "[parameters('ADLS_Source1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage_properties_typeProperties_url')]"
 					},
 					"AzureDataLakeStorage2_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
@@ -107,6 +129,12 @@
 					},
 					"HttpServer_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer_properties_typeProperties_url')]"
+					},
+					"HttpServerBrazil_properties_typeProperties_url": {
+						"value": "[parameters('HttpServerBrazil_properties_typeProperties_url')]"
+					},
+					"HttpServerCanada_properties_typeProperties_url": {
+						"value": "[parameters('HttpServerCanada_properties_typeProperties_url')]"
 					},
 					"template_LS_properties_typeProperties_url": {
 						"value": "[parameters('template_LS_properties_typeProperties_url')]"
@@ -133,6 +161,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'test65496_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "test65496_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'test65496_ArmTemplate_1')]"
 			]
 		}
 	]
