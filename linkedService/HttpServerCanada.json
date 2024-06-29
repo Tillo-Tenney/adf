@@ -1,0 +1,12 @@
+{
+	"name": "HttpServerCanada",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/Tillo-Tenney/Data-Engineering_29-06-2024/main/Canada.csv",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
