@@ -2,7 +2,7 @@
 	"name": "MovieIn",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ADLS_Source1",
+			"referenceName": "AzureDataLakeStorage2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
