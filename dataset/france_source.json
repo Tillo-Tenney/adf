@@ -1,17 +1,15 @@
 {
-	"name": "brazil_dest",
+	"name": "france_source",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorageNew",
+			"referenceName": "HttpServerFrance",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "brazil.csv",
-				"fileSystem": "source"
+				"type": "HttpServerLocation"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
