@@ -2,7 +2,7 @@
 	"name": "canada_dest",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage",
+			"referenceName": "AzureDataLakeStorageNew",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
